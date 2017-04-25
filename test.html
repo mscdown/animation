@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+ 	<!--非严格模式-->
+     console.log(factorial(5));
+     function factorial(num){
+         if(num<1){
+             return 1;
+         }else{
+         	return num*factorial(num-1)
+         }
+     }
+
+     <!--严格模式-->
+	 var F=(function a(num){
+	     if(num<1){
+	        return 1;
+	       }else{
+	        return num*a(num-1)
+	       }
+	  });
+      var h=F;
+      F=null;
+      // alert(h(5))
+
+      var http = require('http');
+		server = http.createServer(function (req, res) {
+		res.writeHeader(200, {"Content-Type": "text/plain"});
+		res.end("Hello World\n");
+		});
+		server.listen(8000);
+		alert("httpd start @8000");
+</script>
+</html>
